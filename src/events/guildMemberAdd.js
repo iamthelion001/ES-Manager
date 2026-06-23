@@ -55,14 +55,14 @@ export default {
                     });
                 } else {
                     const embed = new EmbedBuilder()
-                        .setColor(welcomeConfig.welcomeEmbed?.color || getColor('success'))
+                        .setColor('#E3034F')
                         .setTitle(embedTitle)
                         .setDescription(welcomeMessage)
-                        .setThumbnail(user.displayAvatarURL())
+                      //  .setThumbnail(user.displayAvatarURL())
                         .addFields(
-                            { name: 'User', value: `${user.tag} (${user.id})`, inline: true },
-                            { name: 'Member Count', value: guild.memberCount.toString(), inline: true }
-                        )
+                            .addFields(
+    { name: 'Member Count', value: guild.memberCount.toString(), inline: true }
+)
                         .setTimestamp()
                         .setFooter({ text: embedFooter });
                     
