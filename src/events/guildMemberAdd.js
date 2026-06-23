@@ -60,7 +60,11 @@ export default {
                         .setDescription(welcomeMessage)
                       //  .setThumbnail(user.displayAvatarURL())
                         .addFields(
-    { name: 'Member Count', value: guild.memberCount.toString(), inline: true }
+    {
+        name: ' ',
+        value: `\`\`\`\n👥 ${guild.memberCount} miembros\n\`\`\``,
+        inline: false
+    }
 )
                         .setTimestamp()
                         .setFooter({ text: embedFooter });
