@@ -57,14 +57,10 @@ export default {
                     const embed = new EmbedBuilder()
                         .setColor('#E3034F')
                         .setTitle(embedTitle)
-                        .setDescription(welcomeMessage)
+                        .setDescription(`👥 **${guild.memberCount} miembros en el servidor**`)
                       //  .setThumbnail(user.displayAvatarURL())
                         .addFields(
-  {
-    name: '📊 Información del servidor',
-    value: `👥 **${guild.memberCount} miembros**`,
-    inline: false
-  }
+    { name: 'Member Count', value: guild.memberCount.toString(), inline: true }
 )
                         .setTimestamp()
                         .setFooter({ text: embedFooter });
