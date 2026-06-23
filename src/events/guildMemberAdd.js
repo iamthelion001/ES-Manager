@@ -37,7 +37,7 @@ export default {
                     formatData
                 );
 
-                const messageContent = welcomeConfig.welcomePing ? user.toString() : null;
+                const messageContent = welcomeConfig.welcomePing ? user.toString() : undefined;
 
                 const embedTitle = formatWelcomeMessage(
                     welcomeConfig.welcomeEmbed?.title || '🎉 Welcome!',
@@ -60,7 +60,6 @@ export default {
                         .setDescription(welcomeMessage)
                       //  .setThumbnail(user.displayAvatarURL())
                         .addFields(
-                            .addFields(
     { name: 'Member Count', value: guild.memberCount.toString(), inline: true }
 )
                         .setTimestamp()
