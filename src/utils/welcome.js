@@ -32,12 +32,12 @@ export function formatWelcomeMessage(message, data) {
 
     const tokens = {
         '{user}': user?.toString?.() || 'User',
-        '{user.mention}': user?.toString?.() || 'User',
-        '{user.tag}': user?.tag || 'Unknown#0000',
-        '{user.username}': user?.username || 'Unknown',
+        '{user.mention}': ''
+        '{user.tag}': '',
+        '{user.username}': '',
         '{username}': user?.username || 'Unknown',
         '{user.discriminator}': user?.discriminator || '0000',
-        '{user.id}': user?.id || 'unknown',
+        '{user.id}': '',
         '{server}': guild?.name || 'Server',
         '{server.name}': guild?.name || 'Server',
         '{guild.name}': guild?.name || 'Server',
